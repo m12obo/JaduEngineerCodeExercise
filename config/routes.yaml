@@ -3,3 +3,21 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+home:
+    path: /
+    controller: App\Controller\CheckerIsHomeController::isHome
+
+isPalindrome:
+    path: checker/ispalindrome::isPalindrome
+    controller: App\Controller\CheckerIsPalindromeController::isPalindrome
+
+isAnagram:
+    path: checker/isanagram::isAnagram
+    controller: App\Controller\CheckerIsAnagramController::isAnagram
+
+
+isPangram:
+    path: checker/ispangram::isPangram
+    controller: App\Controller\CheckerIsPangramController::isPangram
+

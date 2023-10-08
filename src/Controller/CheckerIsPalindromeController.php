@@ -15,8 +15,15 @@ class CheckerIsPalindromeController extends AbstractController
     public function IsPalindrome(): Response
     {
         
-        $page = "Palindrome";
-        
-        return $this->render('checker/page.html.twig', ['page' => $page,]);
+        $title = 'Palindrome';
+        $controllerToRender = 'App\\Controller\\CheckerIsPalindromeController::RenderPalindrome';
+
+        return $this->render('checker/main.html.twig', ['title' => $title, 'controllerToRender' => $controllerToRender]);
+    }
+
+    public function RenderPalindrome() : Response
+    {
+        $content = array('palindrome1', 'palindrome2', 'palindrome');
+        return $this->render('checker/palindrome.html.twig', ['content' => $content, ]);
     }
 }

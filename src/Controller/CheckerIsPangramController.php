@@ -15,8 +15,16 @@ class CheckerIsPangramController extends AbstractController
     public function IsPangram(): Response
     {
         
-        $page = "Pangram";
+        $title = "Pangram";
         
-        return $this->render('checker/page.html.twig', ['page' => $page,]);
+        $controllerToRender = 'App\\Controller\\CheckerIsPangramController::RenderPangram';
+
+        return $this->render('checker/main.html.twig', ['title' => $title, 'controllerToRender' => $controllerToRender]);
+    }
+
+    public function RenderPangram() : Response
+    {
+        $content = 'Pangram is here';
+        return $this->render('checker/pangram.html.twig', ['content' => $content, ]);
     }
 }

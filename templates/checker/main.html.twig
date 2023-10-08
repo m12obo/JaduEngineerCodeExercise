@@ -1,0 +1,38 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/stylesheet.css">
+{% endblock stylesheets %}
+
+{% block title %}
+    <title>{{ title }}</title>
+{% endblock title %}
+
+
+{% block body %}
+
+    <div class="topbar" id="JaduExerciseTopBar">
+        <a>Jadu Engineer Code Exercise</a>
+    </div>
+    
+    <div class="row">
+        <div class="column left" >
+            <div class="sidebar sidebarLine">
+                <a href="{{ path('home')}}">Home</a>
+                <a href="{{ path('isPalindrome')}}">isPalindrome</a>
+                <a href="{{ path('isAnagram')}}">isAnagram</a>
+                <a href="{{ path('isPangram')}}">isPangram</a>
+            </div>
+        </div>
+        <div class="column middle content">
+            {{ render(controller(controllerToRender)) }}
+        </div>
+        <div class="column right rightsidebar rightSidebarLine">
+            <a>hello</a>
+        </div>
+
+    </div>
+
+    
+    
+{% endblock body %}

@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use Model\Checker;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -12,12 +11,18 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class CheckerIsAnagramController extends AbstractController
 {
     #[Route('/checker/isanagram')]
-    public function IsAnagram()
+    public function IsAnagram() : Response
     {
+        $title = 'Anagram';
         
-        $title = "Anagram";
-        $anagramArray = ["anagram1", "anagram2","anagram3","anagram4","anagram5",];
-
-        return $this->render('checker/page.html.twig', ['title' => $title, 'Anagrams' => $anagramArray, ]);
+        $controllerToRender = 'App\\Controller\\CheckerIsAnagramController::RenderAnagram';
+        return $this->render('checker/main.html.twig', ['title' => $title, 'controllerToRender' => $controllerToRender, ]);
     }
+
+    public function RenderAnagram() : Response
+    {
+        $content = array('anagram1', 'anagram2', 'anagram3');
+        return $this->render('checker/anagram.html.twig', ['content' => $content, ]);
+    }
+
 }
