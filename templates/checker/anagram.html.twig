@@ -1,12 +1,22 @@
 <h1>isAnagram Exercise.</h1>
 <p>This section will identify if the entered word is an anagram.</p>
 
-<h2>Getting Started</h2>
-<p>please enter a word or sentence in the input box below.</p>
+<h2>Instructions.</h2>
+<p>please enter a word into the 'Word' input box, and another into the 'Word to compare' input box below</p>
+<p>then press the submit button.</p>
 <br>
 <br>
-<input name="inputText" class="input-box"></input>
+<label class="wordLabel" for="wordLabel">Word</label>
+<br>
+<input id="anagramWord" class="input-box"></input>
+<br>
+<br>
+<label for="anagramComparison">Word to compare</label>
+<br>
+<input id="anagramComparison" class="input-box"></input>
+<br>
+<br>
 <button name="SubmitButton" onclick="SubmitOperationType('anagram')" class="input-box">Submit</button>
-
-
+<br>
+<br>
 <div id="anagramResult"></div>

@@ -16,19 +16,16 @@ class CheckerController extends AbstractController
         if ($request->isXmlHttpRequest())
         {
             $data = $request->toArray();
-
-            var_Dump($data);
-
             switch ($data['type'])
             {
                 case 'palindrome' : 
-                    $result = $checker->isPalindrome($data['word1']);
+                    $result = $checker->isPalindrome($data['word']);
                     break;
                 case 'anagram' : 
-                    $result = $checker->isPalindrome($data['word1'], $data['word2']);
+                    $result = $checker->isAnagram($data['word'], $data['comparison']);
                     break;
                 case 'pangram' : 
-                    $result = $checker->isPalindrome($data['word1']);
+                    $result = $checker->isPangram($data['word']);
                     break;
                 default :
                     $result = 'Error : unable to process data';
