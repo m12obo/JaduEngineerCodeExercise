@@ -16,13 +16,19 @@ class CheckerIsAnagramController extends AbstractController
         $title = 'Anagram';
         
         $controllerToRender = 'App\\Controller\\CheckerIsAnagramController::RenderAnagram';
-        return $this->render('checker/main.html.twig', ['title' => $title, 'controllerToRender' => $controllerToRender, ]);
+        $sidebarToRender = 'App\\Controller\\CheckerIsAnagramController::RenderAnagramRightSidebar';
+
+        return $this->render('checker/main.html.twig', ['title' => $title, 'controllerToRender' => $controllerToRender, 'sidebarToRender' => $sidebarToRender]);
     }
 
     public function RenderAnagram() : Response
     {
-        $content = array('anagram1', 'anagram2', 'anagram3');
-        return $this->render('checker/anagram.html.twig', ['content' => $content, ]);
+        return $this->render('checker/anagram.html.twig', );
+    }
+
+    public function RenderAnagramRightSidebar() : Response
+    {
+        return $this->render('checker/anagramRightSidebar.html.twig',);
     }
 
 }

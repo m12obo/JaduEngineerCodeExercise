@@ -2,6 +2,11 @@ div {
   box-sizing : border-box
 } 
 
+h1, h2
+{
+  color: #3e4994;
+}
+
 
 /* The right sidebar */
 .rightSidebar {
@@ -74,9 +79,8 @@ div {
   
   /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
   div.content {
-    margin-left: 33%;
     padding: 1px 16px;
-    align-items: center;
+    align-items: left;
   }
 
   

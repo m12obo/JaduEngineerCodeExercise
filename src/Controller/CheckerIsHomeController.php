@@ -16,18 +16,21 @@ class CheckerIsHomeController extends AbstractController
         $title = "Home";
         
         $controllerToRender = 'App\\Controller\\CheckerIsHomeController::RenderHome';
+        $sidebarToRender = 'App\\Controller\\CheckerIsHomeController::RenderHomeRightSidebar';
 
-        return $this->render('checker/main.html.twig', ['title' => $title, 'controllerToRender' => $controllerToRender]);
+        return $this->render('checker/main.html.twig', ['title' => $title, 'controllerToRender' => $controllerToRender, 'sidebarToRender' => $sidebarToRender]);
 
 
     }
 
     public function RenderHome() : Response
     {
-        $content = ' Welcome to my effort for the Jadu Engineer Code Exercise, please select from the side bar the test you would like to run.';
+        return $this->render('checker/home.html.twig',);
+    }
 
-        return $this->render('checker/home.html.twig', [ 'content' => $content, ]);
-        
+    public function RenderHomeRightSidebar() : Response
+    {
+        return $this->render('checker/homeRightSidebar.html.twig',);
     }
     
 }

@@ -18,13 +18,19 @@ class CheckerIsPangramController extends AbstractController
         $title = "Pangram";
         
         $controllerToRender = 'App\\Controller\\CheckerIsPangramController::RenderPangram';
+        $sidebarToRender = 'App\\Controller\\CheckerIsPangramController::RenderPangramRightSidebar';
 
-        return $this->render('checker/main.html.twig', ['title' => $title, 'controllerToRender' => $controllerToRender]);
+        return $this->render('checker/main.html.twig', ['title' => $title, 'controllerToRender' => $controllerToRender, 'sidebarToRender' => $sidebarToRender]);
     }
 
     public function RenderPangram() : Response
     {
         $content = 'Pangram is here';
         return $this->render('checker/pangram.html.twig', ['content' => $content, ]);
+    }
+
+    public function RenderPangramRightSidebar() : Response
+    {
+        return $this->render('checker/pangramRightSidebar.html.twig',);
     }
 }

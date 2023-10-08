@@ -4,6 +4,11 @@
     <link rel="stylesheet" href="/css/stylesheet.css">
 {% endblock stylesheets %}
 
+{% block javascripts %}
+    <script src="/js/scripts.js"></script>
+    <script src="/js/code.jquery.com_jquery-3.7.1.min.js"></script>
+{% endblock javascripts %}
+
 {% block title %}
     <title>{{ title }}</title>
 {% endblock title %}
@@ -28,7 +33,7 @@
             {{ render(controller(controllerToRender)) }}
         </div>
         <div class="column right rightsidebar rightSidebarLine">
-            <a>hello</a>
+            {{ render(controller(sidebarToRender)) }}
         </div>
 
     </div>

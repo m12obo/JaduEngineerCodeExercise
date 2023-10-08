@@ -21,3 +21,7 @@ isPangram:
     path: checker/ispangram::isPangram
     controller: App\Controller\CheckerIsPangramController::isPangram
 
+CheckerController:
+    path: checker/CheckerController::ajaxRequest
+    controller: App\Controller\CheckerController::ajaxRequest
+
