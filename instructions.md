@@ -60,7 +60,7 @@ Next, replace the routes.yml file with the one in the repositories config direct
 
 Replace the public directory with the repository public directory
 
-Replace the src directory with the repositories src directory
+Replace the src directory with the repository src directory
 
 finally, replace the templates directory with the repositories templates directory
 
