@@ -7,7 +7,7 @@ A breakdown of the time utilisation during the creation of this application.
 |  Description                                                                   |      Time Taken        |\
 |--------------------------------------------------------------------------------|------------------------|\
 | Create Jira Sprint                                                             |      10 minutes        |\
-| Setup a Docker image with a nginx container, php82-container                   |      10 minutes        |\
+| Setup a Docker image with an nginx container, php82-container                  |      10 minutes        |\
 | Setup composer and add Symfony and PHPUnit                                     |      10 minutes        |\
 | Create Git Repository including instructions.md and time.md                    |      15 minutes        |\
 | Create a Symfony application and read enough documentation to get it working   |      4 hours           |\
