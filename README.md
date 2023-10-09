@@ -4,10 +4,10 @@ This code exercise was created as part of the application process for a PHP Engi
 
 See instructions.md for usage and installation instructions.
 
-https://github.com/m12obo/JaduEngineerCodeExercise/edit/master/instructions.md
+https://github.com/m12obo/JaduEngineerCodeExercise/blob/master/instructions.md
 
 See time.md for time allocation for the development of the application.
 
-https://github.com/m12obo/JaduEngineerCodeExercise/edit/master/time.md
+https://github.com/m12obo/JaduEngineerCodeExercise/blob/master/time.md
 
 
