@@ -1,0 +1,60 @@
+version: '3'
+
+networks:
+  nginx-php82-mysql8-node:
+
+services:
+
+  #nginx
+  nginx-service:
+    image: nginx:stable-alpine
+    container_name: nginx-container
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/var/www/project
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php82-service
+    networks:
+      - nginx-php82-mysql8-node
+
+  #php
+  php82-service:
+    build:
+      context: .
+      dockerfile: ./php/Dockerfile
+    container_name: php82-container
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./app:/var/www/project
+    networks:
+      - nginx-php82-mysql8-node
+
+  #mysql
+  mysql8-service:
+    image: mysql:8
+    container_name: mysql8-container
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql:/var/lib/mysql
+    networks:
+      - nginx-php82-mysql8-node
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    restart: always # always restart unless stopped
+    environment:
+      MYSQL_USER: user_root
+      MYSQL_ROOT_PASSWORD: user_secret
+      MYSQL_PASSWORD: user_secret
+      
+  #node
+  node-service:
+    image: node:latest
+    container_name: node-container
+    working_dir: /var/www/project
+    volumes:
+      - ./app:/var/www/project
+    networks:
+      - nginx-php82-mysql8-node
