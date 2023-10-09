@@ -26,4 +26,4 @@ A breakdown of the time utilisation during the creation of this application.
 |                 Routing                                                        |      10 minutes        |\
 |                 CSS                                                            |      15 minutes        |\
 
-                                                                          TOTAL TIME: 10 hours 33 minutes.
+                                                                          TOTAL TIME: 10 hours 20 minutes.
