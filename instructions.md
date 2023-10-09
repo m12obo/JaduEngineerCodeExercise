@@ -70,6 +70,7 @@ If all is set up correctly, visit localhost:8080 to see the home page of the app
 ## Docker Image
 
 The php-8.2 container image can be found here.
+
 https://hub.docker.com/r/mikrobinson/jaduengineercodeexercise
 
 ## License
