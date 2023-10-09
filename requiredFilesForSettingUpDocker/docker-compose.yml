@@ -1,7 +1,7 @@
 version: '3'
 
 networks:
-  nginx-php82-mysql8-node:
+  nginx-php82:
 
 services:
 
@@ -17,7 +17,7 @@ services:
     depends_on:
       - php82-service
     networks:
-      - nginx-php82-mysql8-node
+      - nginx-php82
 
   #php
   php82-service:
@@ -30,31 +30,4 @@ services:
     volumes:
       - ./app:/var/www/project
     networks:
-      - nginx-php82-mysql8-node
-
-  #mysql
-  mysql8-service:
-    image: mysql:8
-    container_name: mysql8-container
-    ports:
-      - "3306:3306"
-    volumes:
-      - ./mysql:/var/lib/mysql
-    networks:
-      - nginx-php82-mysql8-node
-    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
-    restart: always # always restart unless stopped
-    environment:
-      MYSQL_USER: user_root
-      MYSQL_ROOT_PASSWORD: user_secret
-      MYSQL_PASSWORD: user_secret
-      
-  #node
-  node-service:
-    image: node:latest
-    container_name: node-container
-    working_dir: /var/www/project
-    volumes:
-      - ./app:/var/www/project
-    networks:
-      - nginx-php82-mysql8-node
+      - nginx-php82
