@@ -30,6 +30,6 @@ class CheckerIsPalindromeController extends AbstractController
 
     public function RenderPalindromeRightSidebar() : Response
     {
-        return $this->render('checker/palindromeRightSideBar.html.twig',);
+        return $this->render('checker/palindromeRightSidebar.html.twig',);
     }
 }
