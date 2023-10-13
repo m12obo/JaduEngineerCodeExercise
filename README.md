@@ -10,4 +10,8 @@ See time.md for time allocation for the development of the application.
 
 https://github.com/m12obo/JaduEngineerCodeExercise/blob/master/time.md
 
+The live site can be found here 
+
+http://18.133.187.30:8080
+
 
