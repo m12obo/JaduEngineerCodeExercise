@@ -12,6 +12,6 @@ https://github.com/m12obo/JaduEngineerCodeExercise/blob/master/time.md
 
 The live site can be found here 
 
-https://jaduengineercodeexercise.mickrobinson.co.uk/public/index.php
+https://jaduengineercodeexercise.mickrobinson.co.uk/public/index.php/
 
 
